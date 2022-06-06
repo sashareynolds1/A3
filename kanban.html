@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>StudBud</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>replit</title>
+  <link href="kanban.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  
-<div class = "container">
-  <div class = "heading">
-    <strong class = "heading-text">Kanban Board</strong>
 
-  </div>
+   <div class="container">
+		<div class="heading">
+			<strong class="heading-text">Kanban Board</strong>
+		</div>
 
-  <div class= "kanban-board">
+		<div class="kanban-board">
 
-    <div class="kanban" id="todo" ondragover="allowDrop(event)" ondrop = "drop (event)">
-      <div class="square"></div>
-      <strong>To Do</strong>
-      <div class="task-button-block">
-        <button id="task-button" onclick="createTask()">Create New Task</button>
-      </div>
-    </div>
 
-    <div class="kanban" id="inprogress" ondragover="allowDrop(event)" ondrop="drop(event)">
-      <div class="square1"></div>
-      <strong>In Progress</strong>
-    </div>
+<!--TO DO COLUMN -->
+			<div class="kanban" id="todo" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="square"></div>
+				<strong>To Do</strong>  
+				<div class="task-button-block">
+					<button id="task-button" onclick="createTask()">Create new task</button>
+				</div>
+			</div>
 
-    <div class="kanban" id="reviewing" ondragover="allowDrop(event)" ondrop="drop(event)">
-      <div class="square2"></div>
-    </div>
+      <!--   IN PROGRESS COLUMN -->
+			<div class="kanban" id="inprogress" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="square1"></div>
+				<strong>In Progress</strong>
+			</div>
 
-    <div class="kanban" id="done" ondragover="allowDrop(event)" ondrop = "drop(event)">
-      <div class = "square3"></div>
-      <strong>Done</strong>
-    </div>
+      <!--  UNDER REVIEW COLUMN -->
+			<div class="kanban" id="underreview" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="square2"></div>
+				<strong>Under review</strong>
+			</div>
 
-    <div class="create-new-task" id="create-new-task">
-      <strong>New Task</strong><span class="form-row">
-        <label class="form-row-label" for="task-name">Task</label>
-        <input class="form-row-input" id="task-name" name="task-name" type="text"></span> 
-      <span class="form-row"><label class="form-row-label" for="task-name">Description</label>
-        <textarea class="form-row-input" cols="80" id="task-description" name="task-description" rows="10"></textarea>
-      </span>
-      <span class="form-row-buttons"><button id="save-button" onclick="saveTask()">Save</button>
-      </span>
-      <button id="cancel-button" onclick="createTask()">Cancel</button>
-    </div>
-  </div>
+      <!--  DONE COLUMN -->
+			<div class="kanban" id="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="square3"></div>
+				<strong>Done</strong>
+			</div>
 
-</div>
+<!-- CREATE NEW TASK BUTTON -->
+			<div class="create-new-task-block" id="create-new-task-block">
+				<strong>New Task</strong> <span class="form-row"><label class="form-row-label" for="task-name">Task</label> <input class="form-row-input" id="task-name" name="task-name" type="text"></span> <span class="form-row"><label class="form-row-label" for="task-name">Description</label> 
+				<textarea class="form-row-input" cols="70" id="task-description" name="task-description" rows="10"></textarea></span> <span class="form-row-buttons"><button id="save-button" onclick="saveTask()">Save</button></button></span> <button id="cancel-button" onclick="createTask()">Cancel </button>
+			</div>
+		</div>
 
-  <script src="kanban.js"></script>
+	</div>
+
+  <script src="script.js"></script>
 </body>
-</html>
 
-      
- 
+</html>
