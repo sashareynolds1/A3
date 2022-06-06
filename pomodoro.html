@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudBud</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <h1> Pomodoro Timer </h1>
+
+  <div id = "container">
+    <p id="timer" class="label">Timer</p>
+    <p id="break" class="label">Break</p>
+    <p id="cycles" class="label">Cycles</p>
+
+    <!--TIMER-->
+    <div id ="pomodoro-timer" class="timer">
+      <p id="timer-minutes">25</p>
+      <p class="semicolon">:</p>
+      <p id="timer-seconds"00</p>
+    </div>
+
+    <!--CYCLE COUNTER-->
+    <p id="counter" class="timer">0</p>
+
+    <!--BREAK TIMER-->
+    <div id="break-timer" class="timer">
+      <p id="break-minutes">05</p>
+      <p class="semicolon">:</p>
+      <p id="break-seconds"></p>
+    </div>
+
+    <button id="start" class="btn">Start</button>
+    <button id="stop" class="btn">Pause</button>
+    <button id="reset" class="btn"> Reset </button>
+
+  </div>
+
+  <script src="pomodoro.js"></script>
+</body>
+</html>
